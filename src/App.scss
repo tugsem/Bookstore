@@ -1,0 +1,119 @@
+$blue: #0290ff;
+$lightgrey: #fafafa;
+$border: #e8e8e8;
+$darkgrey: #888;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: $lightgrey;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.navBar {
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid $border;
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.navLinks {
+  list-style: none;
+  gap: 0 40px;
+}
+
+.navLinks > li > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.colorBlue {
+  color: $blue;
+}
+
+.bookContainer {
+  background-color: #fff;
+  border: 1px solid $border;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.btns {
+  margin-top: 10px;
+}
+
+.booksContainer {
+  margin: 0 5%;
+}
+
+#form-title {
+  color: $darkgrey;
+  font-weight: 600;
+  padding: 10px 0;
+  border-top: 1px solid $border;
+  width: 100%;
+}
+
+#title,
+#author {
+  border: 1px solid $border;
+  padding: 10px;
+  width: 95%;
+  outline: none;
+}
+
+input::placeholder {
+  color: $border;
+}
+
+.formBtn {
+  background-color: $blue;
+  color: #fff;
+  padding: 10px 3%;
+  border: none;
+  opacity: 1;
+  transition: opacity 0.15s ease-in;
+}
+
+.formBtn:hover,
+.formBtn:focus {
+  opacity: 0.8;
+  transition: opacity 0.15s ease-in;
+}
+
+form {
+  flex-direction: column;
+}
+
+form > * {
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 620px) {
+  form {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  form > label:first-child {
+    width: 50%;
+  }
+
+  form > label:nth-child(2) {
+    width: 30%;
+  }
+
+  #title,
+  #author {
+    width: 100%;
+  }
+}
