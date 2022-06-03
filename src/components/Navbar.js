@@ -14,9 +14,9 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="navBar">
+    <div className="navBar d-flex">
       <h1 className="colorBlue">Booksore CMS</h1>
-      <ul className="navLinks">
+      <ul className="navLinks d-flex">
         {links.map((link) => (
           <li key={link.id}>
             <a href={link.path}>

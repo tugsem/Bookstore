@@ -2,9 +2,9 @@ import React from 'react';
 import 'tachyons';
 
 const Form = () => (
-  <div formContainer>
+  <div className="formContainer">
     <legend id="form-title">ADD NEW BOOK</legend>
-    <form>
+    <form className="d-flex">
       <label htmlFor="title">
         <input type="text" placeholder="Book Title" id="title" />
       </label>
