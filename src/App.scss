@@ -6,6 +6,7 @@ $darkgrey: #888;
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
 .navLinks {
   list-style: none;
   gap: 0 40px;
+  padding-left: 40px;
 }
 
 .navLinks > li > a {
@@ -52,6 +54,10 @@ body {
 
 .booksContainer {
   margin: 0 5%;
+}
+
+.bookList {
+  list-style-type: none;
 }
 
 #form-title {

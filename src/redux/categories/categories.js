@@ -5,12 +5,10 @@ export const checkStatus = () => ({
 });
 
 const categoryReducer = (state = [], action) => {
-  switch (action.type) {
-    case CHECK_STATUS:
-      return 'Under construction';
-    default:
-      return state;
+  if (action.type === CHECK_STATUS) {
+    return 'Under construction';
   }
+  return state;
 };
 
 export default categoryReducer;
