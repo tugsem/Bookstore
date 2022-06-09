@@ -22,7 +22,9 @@ const Form = () => {
           type="button"
           className="formBtn pointer"
           onClick={() => {
-            dispatch(addBook({ title, author, id: Date.now() }));
+            dispatch(addBook({
+              title, author, item_id: Date.now(), category: '',
+            }));
             setTitle('');
             setAuthor('');
           }}
