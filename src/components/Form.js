@@ -22,9 +22,13 @@ const Form = () => {
           type="button"
           className="formBtn pointer"
           onClick={() => {
-            dispatch(addBook({ title, author, id: Date.now() }));
-            setTitle('');
-            setAuthor('');
+            if (title.length > 0 && author.length > 0) {
+              dispatch(addBook({
+                title, author, item_id: Date.now(), category: '',
+              }));
+              setTitle('');
+              setAuthor('');
+            }
           }}
         >
           ADD BOOK
