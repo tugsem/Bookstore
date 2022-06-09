@@ -1,23 +1,35 @@
 const ADD = 'ADD';
 const REMOVE = 'REMOVE';
 
-export const addBook = (title, author) => ({
+const initialState = [
+  {
+    title: 'book1',
+    author: 'author1',
+    id: 0,
+  },
+  {
+    title: 'book2',
+    author: 'author2',
+    id: 1,
+  },
+];
+
+export const addBook = (bookObj) => ({
   type: ADD,
-  title,
-  author,
+  payload: bookObj,
 });
 
-export const removeBook = (id) => ({
+export const removeBook = (index) => ({
   type: REMOVE,
-  id,
+  payload: index,
 });
 
-const bookReducer = (state = [], action) => {
+const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD:
-      return [...state, { title: action.title, author: action.author }];
+      return [...state, action.payload];
     case REMOVE:
-      return state.filter((book) => book.id !== action.id);
+      return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }

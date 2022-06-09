@@ -2,7 +2,7 @@ import './App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Categories from './pages/Categories';
-import Books from './pages/Books';
+import Books from './pages/BookContainer';
 
 function App() {
   return (
