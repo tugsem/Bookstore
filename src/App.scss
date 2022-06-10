@@ -2,6 +2,7 @@ $blue: #0290ff;
 $lightgrey: #fafafa;
 $border: #e8e8e8;
 $darkgrey: #888;
+$blue2: #6da1ce;
 
 * {
   box-sizing: border-box;
@@ -13,8 +14,17 @@ body {
   background-color: $lightgrey;
 }
 
+.mainBlue {
+  color: $blue;
+}
+
 .d-flex {
   display: flex;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .navBar {
@@ -28,24 +38,41 @@ body {
 
 .navLinks {
   list-style: none;
-  gap: 0 40px;
   padding-left: 40px;
+  flex-wrap: wrap;
+  gap: 10px 0;
 }
 
 .navLinks > li > a {
   text-decoration: none;
   color: #000;
+  padding-right: 40px;
 }
 
-.colorBlue {
+.navLinks > li > a:hover {
   color: $blue;
 }
 
+.colorBlue {
+  color: $blue2;
+}
+
 .bookContainer {
+  flex-direction: column;
+  gap: 30px 0;
   background-color: #fff;
   border: 1px solid $border;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 25px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seperator {
+  flex-direction: column;
+  gap: 30px 40px;
+  align-items: center;
+  padding: 0 5%;
 }
 
 .btns {
@@ -56,6 +83,11 @@ body {
   margin: 0 5%;
 }
 
+.progressBar {
+  gap: 0 20px;
+  align-items: center;
+}
+
 .bookList {
   list-style-type: none;
 }
@@ -63,7 +95,7 @@ body {
 #form-title {
   color: $darkgrey;
   font-weight: 600;
-  padding: 10px 0;
+  padding-top: 20px;
   border-top: 1px solid $border;
   width: 100%;
 }
@@ -80,15 +112,40 @@ input::placeholder {
   color: $border;
 }
 
-.formBtn {
+.darkGrey {
+  color: $darkgrey;
+}
+
+.chapter {
+  gap: 5px 0;
+}
+
+.line {
+  display: none;
+  height: 70px;
+  border-left: 2px solid $border;
+}
+
+.bordered {
+  padding: 0 10px;
+  border-left: 2px solid $border;
+  border-right: 2px solid $border;
+}
+
+.formBtn,
+.updateBtn {
   background-color: $blue;
-  color: #fff;
+  color: $lightgrey;
   padding: 10px 3%;
   border: none;
   opacity: 1;
   transition: opacity 0.15s ease-in;
+  border-radius: 5px;
+  font-size: small;
+  letter-spacing: 0.9px;
 }
 
+.updateBtn:hover,
 .formBtn:hover,
 .formBtn:focus {
   opacity: 0.8;
@@ -103,11 +160,38 @@ form > * {
   margin: 10px 0;
 }
 
-@media screen and (min-width: 620px) {
+.iconContainer {
+  position: absolute;
+  right: 40px;
+  padding: 15px;
+  border: 1px solid $border;
+  border-radius: 50%;
+}
+
+.userIcon {
+  color: $blue;
+  display: flex;
+  align-self: center;
+}
+
+@media screen and (min-width: 680px) {
   form {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .bookContainer {
+    flex-direction: row;
+  }
+
+  .seperator {
+    flex-direction: row;
+    gap: 0 40px;
+  }
+
+  .line {
+    display: flex;
   }
 
   form > label:first-child {
