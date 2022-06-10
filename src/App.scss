@@ -37,6 +37,10 @@ body {
   color: #000;
 }
 
+.navLinks > li > a:hover {
+  color: $blue;
+}
+
 .colorBlue {
   color: $blue;
 }
