@@ -13,7 +13,7 @@
 
 ## Live Demo 
 
-[Live Demo Link](https://tugsem.github.io/bookstore/dist/)
+[Live Demo Link](https://tugsem.github.io/bookstore/public/)
 
 ## Getting Started
 
